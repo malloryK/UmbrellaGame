@@ -10,6 +10,8 @@ public class Umbrella : MonoBehaviour {
 
 	public float Speed { get; set; }
 	public bool hasBeenSeen = false;
+	public Sprite burst;
+	public GameObject splash;
 
 	//int smooth = 2;
 
@@ -22,14 +24,16 @@ public class Umbrella : MonoBehaviour {
 
 	void FixedUpdate(){
 	//wait for umbrella to go on screen and off again, then destroy
-		if (!hasBeenSeen ) {
-			if(this.renderer.isVisible){
+		if (!Hit) {
+			if (!hasBeenSeen) {
+					if (this.renderer.isVisible) {
 
-				hasBeenSeen = true;
+							hasBeenSeen = true;
+					}
+			} else if (hasBeenSeen && this.renderer.isVisible == false) {
+
+					Destroy (this.gameObject.gameObject);
 			}
-		}else if(hasBeenSeen && this.renderer.isVisible == false){
-
-			Destroy(this.gameObject.gameObject);
 		}
 	}
 
@@ -55,7 +59,16 @@ public class Umbrella : MonoBehaviour {
 		
 		
 		if (collision.gameObject.CompareTag ("Droplet") || collision.gameObject.CompareTag ("LightDroplet") ) {
-			this.Hit = true;			
+			this.Hit = true;
+
+			GameObject ps = (GameObject)Instantiate(splash, transform.position, Quaternion.identity);
+			ps.renderer.sortingLayerName = "GameElements";
+			SpriteRenderer render = this.gameObject.GetComponent<SpriteRenderer>();
+			render.sprite= this.burst;
+			render.sortingOrder =-1;
+			Destroy(collision.gameObject);
+			Destroy (this.gameObject.collider2D);
+
 		}
 	}
 }
