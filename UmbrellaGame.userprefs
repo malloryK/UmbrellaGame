@@ -1,11 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Materials\Droplet\Droplet.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Materials\Umbrellas\Umbrella.cs">
     <Files>
-      <File FileName="Assets\Materials\Droplet\SpawnDrops.cs" Line="19" Column="1" />
-      <File FileName="Assets\Materials\Umbrellas\Umbrella.cs" Line="27" Column="3" />
-      <File FileName="Assets\Materials\Droplet\Droplet.cs" Line="26" Column="4" />
-      <File FileName="Assets\Materials\Umbrellas\SpawnUmbrellas.cs" Line="22" Column="2" />
+      <File FileName="Assets\Materials\Umbrellas\Umbrella.cs" Line="70" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -60,14 +60,14 @@ public class Umbrella : MonoBehaviour {
 		
 		if (collision.gameObject.CompareTag ("Droplet") || collision.gameObject.CompareTag ("LightDroplet") ) {
 			this.Hit = true;
-
+			this.GetComponent<Animator>().SetBool("floating", false);
 			GameObject ps = (GameObject)Instantiate(splash, transform.position, Quaternion.identity);
 			ps.renderer.sortingLayerName = "GameElements";
 			SpriteRenderer render = this.gameObject.GetComponent<SpriteRenderer>();
 			render.sprite= this.burst;
 			render.sortingOrder =-1;
 			Destroy(collision.gameObject);
-			Destroy (this.gameObject.collider2D);
+			Destroy (this.gameObject, 2);
 
 		}
 	}
