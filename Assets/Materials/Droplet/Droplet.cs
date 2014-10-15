@@ -3,9 +3,11 @@ using System.Collections;
 
 public class Droplet : MonoBehaviour {
 
+	public int drops;
+
 	// Use this for initialization
 	void Start () {
-	
+		drops = 0;
 	}
 	
 	// Update is called once per frame
@@ -14,16 +16,13 @@ public class Droplet : MonoBehaviour {
 			Destroy(this.gameObject);
 		}
 	}
-//
-//	void OnCollisionEnter2D(Collision2D collision) {
-//		
-//
-//		if (collision.gameObject.CompareTag ("Teeter")&& this.gameObject.CompareTag("Droplet")) {
-//
-//			this.rigidbody2D.mass  = collision.gameObject.rigidbody2D.mass*.2f;
-//			this.gameObject.tag = "LightDroplet";
-//		}
-//		
-//	}
+
+	void OnCollisionEnter2D(Collision2D collision) {
+
+		if (collision.gameObject.CompareTag ("Teeter")) {
+			drops++;
+		}
+		
+	}
 
 }

@@ -58,7 +58,7 @@ public class Umbrella : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision) {
 		
 		
-		if (collision.gameObject.CompareTag ("Droplet") || collision.gameObject.CompareTag ("LightDroplet") ) {
+		if (collision.gameObject.CompareTag ("Droplet")  ) {
 			Destroy (this.GetComponent<Collider2D>());
 			this.Hit = true;
 			this.GetComponent<Animator>().SetBool("floating", false);
