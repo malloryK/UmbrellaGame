@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Materials\Droplet\Droplet.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Materials\Umbrellas\Umbrella.cs">
     <Files>
-      <File FileName="Assets\Materials\Umbrellas\Umbrella.cs" Line="1" Column="1" />
-      <File FileName="Assets\Materials\Droplet\Droplet.cs" Line="15" Column="4" />
+      <File FileName="Assets\Materials\Umbrellas\Umbrella.cs" Line="56" Column="2" />
+      <File FileName="Assets\Materials\Droplet\Droplet.cs" Line="24" Column="43" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
