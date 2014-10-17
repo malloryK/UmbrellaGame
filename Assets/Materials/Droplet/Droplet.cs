@@ -15,12 +15,21 @@ public class Droplet : MonoBehaviour {
 		if (!this.renderer.isVisible) {
 			Destroy(this.gameObject);
 		}
+		if (this.rigidbody2D.velocity.y < 0) {
+			GetComponent<Animator> ().SetBool ("falling",true) ;
+		} else {
+			GetComponent<Animator> ().SetBool ("falling",false);
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
 
 		if (collision.gameObject.CompareTag ("Teeter")) {
 			drops++;
+			this.transform.GetChild(0).GetComponent<TextMesh>().text = drops.ToString();
+			Animator anim = this.GetComponent<Animator>();
+			anim.SetTrigger("hit");
+
 		}
 		
 	}
